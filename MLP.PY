@@ -227,3 +227,10 @@ test_acc = np.mean(np.argmax(test_pred, axis=1) ==
                    np.argmax(Y_test, axis=1))
 
 print("Test Accuracy:", test_acc)
+
+
+print("Model saved successfully.")
+np.savetxt("w1.txt", w1)
+np.savetxt("b1.txt", b1)
+np.savetxt("w2.txt", w2)
+np.savetxt("b2.txt", b2)

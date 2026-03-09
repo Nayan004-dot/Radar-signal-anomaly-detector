@@ -285,3 +285,10 @@ for key, val in params.items():
     np.savetxt(f"{key}.txt", val)
 
 print("\nAll weights saved successfully.")
+signal = generate_signal(0)      # drone
+
+features = extract_features(signal)
+
+features_q = np.round(features * 127).astype(np.int8)
+
+np.savetxt("input.mem", features_q.astype(np.uint8), fmt="%02x")

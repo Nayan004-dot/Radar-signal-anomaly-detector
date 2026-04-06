@@ -45,10 +45,10 @@ def extract_features(signal):
     fft_vals = fft_vals / (np.max(fft_vals) + 1e-9)
     return fft_vals[:N_FEATURES]
 
-signal = generate_signal(1)      # drone
+signal = generate_signal(2)      
 
 features = extract_features(signal)
 
 features_q = np.round(features * 127).astype(np.int8)
 
-np.savetxt("input_bird.mem", features_q.astype(np.uint8), fmt="%02x")
+np.savetxt("input_car.mem", features_q.astype(np.uint8), fmt="%02x")

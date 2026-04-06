@@ -17,7 +17,7 @@ The model is a fully connected MLP implemented from scratch in NumPy:
 * **Hidden Layer 2:** 32 Neurons + ReLU Activation
 * **Output Layer:** 4 Neurons + Softmax (for training) / Argmax (for hardware inference)
 
-## ⚡ Hardware-Aware Quantization Logic
+## Hardware-Aware Quantization Logic
 To ensure the model can run on an FPGA with only integer arithmetic, the following quantization strategy was implemented:
 
 * **Scaling Factor ($2^7$):** Weights are scaled by 128 to utilize the full range of a signed 8-bit integer (-128 to 127).
